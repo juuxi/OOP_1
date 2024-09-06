@@ -40,8 +40,11 @@ int TApplication::exec()
                     cin>>num;
                     TArray arr(num);
                     cin>>arr;
+                    cout<<arr;
                 }
                 break;
+           case 6:
+                //cout<<arr;
             default:
                 break;
         }

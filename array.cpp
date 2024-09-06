@@ -12,13 +12,22 @@ TArray::TArray(int numb)
     num = numb;
 }
 
-istream& operator>> (istream& is, TArray& arr)
+istream& operator>> (istream& is, TArray& a)
 {
-    for (int i = 0; i < arr.num; i++)
+    for (int i = 0; i < a.num; i++)
     {
-        is>>arr.arr[i];
+        is>>a.arr[i];
     }
     return is;
+}
+
+ostream& operator<< (ostream& os, TArray& a)
+{
+    for (int i = 0; i < a.num; i++)
+    {
+       os<<a.arr[i]<<" ";
+    }
+    return os;
 }
 
 TArray::~TArray()

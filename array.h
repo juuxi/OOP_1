@@ -14,6 +14,7 @@ public:
     TArray();
     TArray(int);
     friend istream& operator>> (istream&, TArray&);
+    friend ostream& operator<< (ostream&, TArray&);
     ~TArray();
 };
 
