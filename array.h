@@ -9,12 +9,15 @@ using namespace std;
 class TArray
 {
     number* arr;
-    int num;
+    int size;
 public:
     TArray();
     TArray(int);
     friend istream& operator>> (istream&, TArray&);
     friend ostream& operator<< (ostream&, TArray&);
+    void change_size(int);
+    number count_average();
+    number count_average_square();
     ~TArray();
 };
 

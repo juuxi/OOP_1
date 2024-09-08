@@ -26,6 +26,7 @@ int TApplication::menu()
 int TApplication::exec()
 {
     int ch;
+    TArray arr;
     while (true)
     {
         ch = menu();
@@ -38,11 +39,14 @@ int TApplication::exec()
                     int num;
                     cout<<"Введите число элементов" << endl;
                     cin>>num;
-                    TArray arr(num);
+                    arr.change_size(num);
                     cin>>arr;
                     cout<<arr;
                 }
                 break;
+           case 2:
+                cout<<"среднее значение - "<<arr.count_average()<<endl;
+                cout<<"СКО - "<<arr.count_average_square()<<endl;
            case 6:
                 //cout<<arr;
             default:
