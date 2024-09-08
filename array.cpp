@@ -29,6 +29,7 @@ ostream& operator<< (ostream& os, TArray& a)
     {
        os<<a.arr[i]<<" ";
     }
+    os<<endl;
     return os;
 }
 
@@ -71,6 +72,39 @@ number TArray::count_average_square()
     }
     number average_square = sqrt(sum_dif/(size-1));
     return average_square;
+}
+
+void TArray::sort(bool reverse)
+{
+    for (int i = 0; i < size-1; i++)
+    {
+        for(int j = 0; j < size-1; j++)
+        {
+            if(!reverse)
+            {
+                if(arr[j] > arr[j+1])
+                {
+                    number temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+            else
+            {
+                if(arr[j] < arr[j+1])
+                {
+                    number temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+}
+
+void TArray::change_element(int index, number elem)
+{
+    arr[index] = elem;
 }
 
 TArray::~TArray()

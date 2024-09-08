@@ -41,15 +41,41 @@ int TApplication::exec()
                     cin>>num;
                     arr.change_size(num);
                     cin>>arr;
-                    cout<<arr;
                 }
                 break;
            case 2:
                 cout<<"среднее значение - "<<arr.count_average()<<endl;
                 cout<<"СКО - "<<arr.count_average_square()<<endl;
+                break;
+           case 3:
+                cout << "1 - По возрастанию" << endl;
+                cout << "2 - По убыванию" << endl;
+                int reverse;
+                cin>>reverse;
+                if (reverse == 1)
+                    arr.sort(false);
+                else
+                    arr.sort(true);
+                break;
+           case 4:
+                cout << "Введите новый размер" << endl << "> ";
+                int num;
+                cin >> num;
+                arr.change_size(num);
+                break;
+           case 5:
+                cout << "Введите индекс" << endl << "> ";
+                int index;
+                number elem;
+                cin >> index;
+                cout << "Введите новое значение" << endl << "> ";
+                cin >> elem;
+                arr.change_element(index, elem);
+                break;
            case 6:
-                //cout<<arr;
-            default:
+                cout<<arr;
+                break;
+           default:
                 break;
         }
     }

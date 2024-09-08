@@ -18,6 +18,8 @@ public:
     void change_size(int);
     number count_average();
     number count_average_square();
+    void change_element(int, number);
+    void sort(bool);
     ~TArray();
 };
 
