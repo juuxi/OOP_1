@@ -35,13 +35,8 @@ int TApplication::exec()
             case 0:
                 return 0;
             case 1:
-                {
-                    int num;
-                    cout<<"Введите число элементов" << endl;
-                    cin>>num;
-                    arr.change_size(num);
-                    cin>>arr;
-                }
+                cout << "Введите элементы" << endl;
+                cin>>arr;
                 break;
            case 2:
                 cout<<"среднее значение - "<<arr.count_average()<<endl;
