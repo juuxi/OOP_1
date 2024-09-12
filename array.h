@@ -20,6 +20,7 @@ public:
     number count_average_square();
     void change_element(int, number);
     void sort(bool);
+    int get_size();
     ~TArray();
 };
 

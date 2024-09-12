@@ -35,8 +35,13 @@ int TApplication::exec()
             case 0:
                 return 0;
             case 1:
-                cout << "Введите элементы" << endl;
-                cin>>arr;
+                if (arr.get_size() != 0)
+                {
+                    cout << "Введите элементы" << endl;
+                    cin>>arr;
+                }
+                else
+                    cout << "Массив пуст" << endl;
                 break;
            case 2:
                 cout<<"среднее значение - "<<arr.count_average()<<endl;

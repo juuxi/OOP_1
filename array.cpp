@@ -78,7 +78,7 @@ void TArray::sort(bool reverse)
 {
     for (int i = 0; i < size-1; i++)
     {
-        for(int j = 0; j < size-1; j++)
+        for(int j = 0; j < size-1-i; j++)
         {
             if(!reverse)
             {
@@ -105,6 +105,11 @@ void TArray::sort(bool reverse)
 void TArray::change_element(int index, number elem)
 {
     arr[index] = elem;
+}
+
+int TArray::get_size()
+{
+    return size;
 }
 
 TArray::~TArray()
