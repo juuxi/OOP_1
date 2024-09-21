@@ -1,4 +1,5 @@
 #include "complex.h"
+#include <math.h>
 
 TComplex::TComplex()
 {
@@ -53,4 +54,38 @@ TComplex TComplex::operator* (TComplex c)
     temp.re = re * c.re - im * c.im;
     temp.im = re * c.im - im * c.re;
     return temp;
+}
+
+double TComplex::count_module()
+{
+    return sqrt(re * re + im * im);
+}
+
+double TComplex::count_argument()
+{
+    return atan(im / re);
+}
+
+bool TComplex::operator> (TComplex c)
+{
+    if (count_module() > c.count_module())
+        return true;
+    if (count_module() < c.count_module())
+        return false;
+    if (count_argument() > c.count_argument())
+        return true;
+    else
+        return false;
+}
+
+bool TComplex::operator< (TComplex c)
+{
+    if (count_module() < c.count_module())
+        return true;
+    if (count_module() > c.count_module())
+        return false;
+    if (count_argument() < c.count_argument())
+        return true;
+    else
+        return false;
 }
