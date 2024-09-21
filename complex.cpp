@@ -24,12 +24,10 @@ istream& operator>> (istream& is, TComplex& c)
     return is;
 }
 
-TComplex TComplex::operator+= (TComplex c)
+void TComplex::operator+= (TComplex c)
 {
-    TComplex temp;
-    temp.re = re + c.re;
-    temp.im = im + c.im;
-    return temp;
+    re += c.re;
+    im += c.im;
 }
 
 TComplex TComplex::operator- (TComplex c)
@@ -88,4 +86,12 @@ bool TComplex::operator< (TComplex c)
         return true;
     else
         return false;
+}
+
+TComplex sqrt (TComplex c)
+{
+    TComplex temp;
+    temp.re = sqrt(c.re);
+    temp.im = sqrt(c.im);
+    return temp;
 }

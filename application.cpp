@@ -33,8 +33,11 @@ int TApplication::exec()
         switch(ch)
         {
             case 0:
+            {
                 return 0;
+            }
             case 1:
+            {
                 if (arr.get_size() != 0)
                 {
                     cout << "Введите элементы" << endl;
@@ -43,11 +46,15 @@ int TApplication::exec()
                 else
                     cout << "Массив пуст" << endl;
                 break;
+            }
            case 2:
+            {
                 cout<<"среднее значение - "<<arr.count_average()<<endl;
                 cout<<"СКО - "<<arr.count_average_square()<<endl;
                 break;
+            }
            case 3:
+            {
                 cout << "1 - По возрастанию" << endl;
                 cout << "2 - По убыванию" << endl;
                 int reverse;
@@ -57,13 +64,17 @@ int TApplication::exec()
                 else
                     arr.sort(true);
                 break;
+            }
            case 4:
+            {
                 cout << "Введите новый размер" << endl << "> ";
                 int num;
                 cin >> num;
                 arr.change_size(num);
                 break;
+            }
            case 5:
+            {
                 cout << "Введите индекс" << endl << "> ";
                 int index;
                 number elem;
@@ -72,11 +83,16 @@ int TApplication::exec()
                 cin >> elem;
                 arr.change_element(index, elem);
                 break;
+            }
            case 6:
+            {
                 cout<<arr;
                 break;
+            }
            default:
+            {
                 break;
+            }
         }
     }
 }

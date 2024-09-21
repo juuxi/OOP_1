@@ -14,8 +14,9 @@ public:
 
     friend ostream& operator<< (ostream&, TComplex);
     friend istream& operator>> (istream&, TComplex&);
+    friend TComplex sqrt (TComplex);
 
-    TComplex operator+= (TComplex);
+    void operator+= (TComplex);
     TComplex operator- (TComplex);
     TComplex operator/ (int);
     TComplex operator* (TComplex);
